@@ -1,0 +1,26 @@
+<h1>House Number: {{house.houseNumber}}</h1>
+
+<form id="input" (ngSubmit)="saveHouse()">
+    <div class="row mb-3">
+        <label for="houseNumber" class="form-label col-sm-2 col-form-label">House Number</label>
+        <input type="number" class="form-contol col-sm-10" id="houseNumber" value="{{ house.houseNumber }}" disabled>
+    </div>
+    <div class="row mb-3">
+        <label for="street" class="form-label col-sm-2 col-form-label">Street</label>
+        <input type="text" class="form-contol col-sm-10" id="street" value="{{ house.street }}">
+    </div>
+    <div class="row mb-3">
+        <label for="hNumber" class="form-label col-sm-2 col-form-label">Number</label>
+        <input type="text" class="form-contol col-sm-10" id="hNumber" value="{{ house.hNumber }}">
+    </div>
+    <div class="row mb-3">
+        <label for="postcode" class="form-label col-sm-2 col-form-label">Postcode</label>
+        <input type="number" class="form-contol col-sm-10" id="postcode" value="{{ house.postcode }}">
+    </div>
+    <div class="row mb-3">
+        <label for="city" class="form-label col-sm-2 col-form-label">City</label>
+        <input type="text" class="form-contol col-sm-10" id="city" value="{{ house.city }}" disabled>
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+    <button type="button" class="btn btn-danger" (click)="deleteHouse()">delete</button>
+</form>

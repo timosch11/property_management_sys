@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+h1{
+    color: #B2E0BB;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.table > thead{
+    background-color: #B2E0BB;
+}
+tbody:hover{
+    color: rgb(157, 170, 160);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+app-root {
+    padding-left: 22em;
+    padding-top: 5em;
+    display: flex;
+}
+
+header {
+    position: fixed;
+    height: 5em;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #B2E0BB;
+}
+
+app-nav {
+    position: fixed;
+    top: 5em;
+    left: 0;
+    height: 100vh;
+    z-index: 1;
+    width: 20em;
+}
+
+router-outlet + * {
+    width: 100%;
+    margin-right: 1em;
+}
+
+app-home {
+    height: calc(100vh - 5em);
+    background-image: url('src/assets/home.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
+label {
+    background-color: #B2E0BB;
+    border: 2px solid black;
+    border-right: 0;
+}
+
+input {
+    border: 2px solid black;
+}
+
+.row {
+    margin: 0;
+}
+
+.toolbar {
+    display: flex;
+    margin: 1em 0;
+}
+
+.toolbar > * {
+    padding: 0 1em;
+}
+
+.toolbar > :first-child {
+    padding-left: 0;
+}
+
+.active-checkbox > label {
+    background-color: transparent;
+    border: none;
+    padding: 0.5em;
+}
+
+.btn-danger {
+    margin-left: 1em;
+}

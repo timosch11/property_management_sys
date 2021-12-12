@@ -1,0 +1,21 @@
+<h1>{{ renter.rFirstname }} {{ renter.rLastname }}</h1>
+<form id="rInput" (ngSubmit)="saveRenter()">
+    <div class="row mb-3">
+        <label for="renterId" class="form-label col-sm-2 col-form-label">RenterId</label>
+        <input type="number" class="form-contol col-sm-10" id="renterId" value="{{ renter.renterId }}" disabled>
+    </div>
+    <div class="row mb-3">
+        <label for="rFirstname" class="form-label col-sm-2 col-form-label">Firstname</label>
+        <input type="text" class="form-contol col-sm-10" id="rFirstname" value="{{ renter.rFirstname }}">
+    </div>
+    <div class="row mb-3">
+        <label for="rLastname" class="form-label col-sm-2 col-form-label">Lastname</label>
+        <input type="text" class="form-contol col-sm-10" id="rLastname" value="{{ renter.rLastname }}">
+    </div>
+    <div class="row mb-3">
+        <label for="rGender" class="form-label col-sm-2 col-form-label">Gender</label>
+        <input type="text" class="form-contol col-sm-10" id="rGender" value="{{renter.rGender}}">
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+    <button type="button" class="btn btn-danger" (click)="deleteRenter()">delete</button>
+</form>

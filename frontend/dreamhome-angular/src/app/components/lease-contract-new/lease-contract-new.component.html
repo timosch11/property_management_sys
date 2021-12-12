@@ -1,0 +1,33 @@
+<h1>New Lease Contract</h1>
+
+<form id="rInput" (ngSubmit)="saveLeaseContract()">
+    <div class="row mb-3">
+        <label for="leaseAmount" class="form-label col-sm-2 col-form-label">Lease Amount</label>
+        <input type="number" class="form-contol col-sm-10" id="leaseAmount" placeholder="leaseAmount">
+    </div>
+    <div class="row mb-3">
+        <label for="dateOfSignature" class="form-label col-sm-2 col-form-label">Date of Signature</label>
+        <input type="date" class="form-contol col-sm-10" id="dateOfSignature">
+    </div>
+    <div class="row mb-3">
+        <label for="additionalCosts" class="form-label col-sm-2 col-form-label">Additionl Costs</label>
+        <input type="number" class="form-contol col-sm-10" id="additionalCosts" placeholder="additionalCosts">
+    </div>
+    <div class="row mb-3">
+        <label for="numberOfPersons" class="form-label col-sm-2 col-form-label">Number of Persons</label>
+        <input type="number" class="form-contol col-sm-10" id="numberOfPersons" placeholder="numberOfPersons">
+    </div>    
+    <div class="row mb-3">
+        <label for="renterId" class="form-label col-sm-2 col-form-label">Renter ID</label>
+        <input type="number" class="form-contol col-sm-10" id="renterId" placeholder=renterId>
+    </div>    
+    <div class="row mb-3">
+        <label for="apartmentId" class="form-label col-sm-2 col-form-label">Apartment ID</label>
+        <input type="number" class="form-contol col-sm-10" id="apartmentId" placeholder="apartmentId">
+    </div>
+    <div class="row mb-3">
+        <label for="active" class="form-label col-sm-2 col-form-label">Status</label>
+        <input type="text" class="form-contol col-sm-10" id="active" placeholder="active">
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+</form>

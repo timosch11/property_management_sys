@@ -1,0 +1,52 @@
+<h1>Apartments</h1>
+<div class="toolbar">
+     <div id="search" class="nav-item">
+        <form onsubmit="return false">
+            <div>
+                <input #searchApartment type="text" id="searchApartment" placeholder="search"
+                    (keydown.enter)="search(searchApartment.value)" />
+                <button type="button" class="btn" (click)="search(searchApartment.value)">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div> 
+    <button class="btn btn-primary" [routerLink]="['/apartments/new']">new apartment</button>
+</div>
+<table class="table">
+    <thead class="tbl">
+        <tr>
+            <th (click)="sortByApartmentId()">Apartment ID</th>
+            <th (click)="sortByMaxRenter()">Maximum of Renters</th>
+            <th >Size</th>
+            <th >Apartment Number</th>
+            <th >Number of Rooms</th>
+            <th >Security Deposit</th>
+            <th >House ID</th>
+            <th >Street</th>
+            <th >Postcode</th>
+            <th >City</th>
+            
+        </tr>
+    </thead>
+    <tbody *ngFor="let apartment of apartments">
+        <tr [routerLink]="['/apartments', apartment.apartmentId]">
+            <td>{{ apartment.apartmentId }}</td>
+            <td>{{ apartment.maxRenter }}</td>
+            <td>{{ apartment.size }} m<sup>2</sup></td>
+            <td>{{ apartment.apartmentNumber }}</td>
+            <td>{{ apartment.numberRooms }}</td>
+            <td>{{ apartment.securityDeposit }} €</td>
+            <td>{{ apartment.houseNumber }}</td>
+            <td>{{ apartment.street }}</td>
+            <td>{{ apartment.postcode }}</td>
+            <td>{{ apartment.city }}</td>
+        </tr>
+    </tbody>
+</table>

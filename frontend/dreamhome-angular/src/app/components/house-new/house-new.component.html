@@ -1,0 +1,17 @@
+<h1>New House</h1>
+
+<form id="rInput" (ngSubmit)="saveHouse()">
+    <div class="row mb-3">
+        <label for="street" class="form-label col-sm-2 col-form-label">Street</label>
+        <input type="text" class="form-contol col-sm-10" id="street" placeholder="street">
+    </div>
+    <div class="row mb-3">
+        <label for="hNumber" class="form-label col-sm-2 col-form-label">Number</label>
+        <input type="number" class="form-contol col-sm-10" id="hNumber" placeholder="houseNumber">
+    </div>
+    <div class="row mb-3">
+        <label for="postcode" class="form-label col-sm-2 col-form-label">Postcode</label>
+        <input type="number" class="form-contol col-sm-10" id="postcode" placeholder="postcode">
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+</form>

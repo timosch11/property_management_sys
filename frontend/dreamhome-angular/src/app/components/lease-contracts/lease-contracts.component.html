@@ -1,0 +1,53 @@
+<h1>Lease Contracts</h1>
+<div class="toolbar">
+    <div id="search" class="nav-item">
+        <form onsubmit="return false">
+            <div>
+                <input #searchLeaseContract type="text" id="searchLeaseContract" placeholder="search"
+                    (keydown.enter)="search(searchLeaseContract.value)" />
+                <button type="button" class="btn" (click)="search(searchLeaseContract.value)">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="active-checkbox">
+        <input type="checkbox" id="active" name="active" [(ngModel)]="isActiveChecked" (change)="filterByActive(isActiveChecked)">
+        <label for="active">active</label>
+    </div>
+    <div>
+        <button class="btn btn-primary" [routerLink]="['/lease-contracts/new']">new lease contract</button>
+    </div>
+</div>
+<table class="table">
+    <thead class="tbl">
+        <tr>
+            <th (click)="sortByContractId()">Contract ID</th>
+            <th >Lease Amount</th>
+            <th >Date of Signature</th>
+            <th >Additional Costs</th>
+            <th >Number of Persons</th>
+            <th (click)="sortByRenterId()">Renter ID</th>
+            <th (click)="sortByApartmentId()">Apartment ID</th>
+            <th (click)="sortByActive()">Active</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let leaseContract of leaseContracts">
+        <tr [routerLink]="['/lease-contracts', leaseContract.contractId]">
+            <td>{{ leaseContract.contractId }}</td>
+            <td>{{ leaseContract.leaseAmount }} €</td>
+            <td>{{ leaseContract.dateOfSignature }}</td>
+            <td>{{ leaseContract.additionalCosts }} €</td>
+            <td>{{ leaseContract.numberOfPersons }}</td>
+            <td>{{ leaseContract.renterId }}</td>
+            <td>{{ leaseContract.apartmentId }}</td>
+            <td>{{ leaseContract.active }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,38 @@
+<h1>Lease Contract: {{leaseContract.contractId}}</h1>
+
+<form id="input" (ngSubmit)="saveLeaseContract()">
+    <div class="row mb-3">
+        <label for="contractId" class="form-label col-sm-2 col-form-label">Contract ID</label>
+        <input type="number" class="form-contol col-sm-10" id="contractId" value="{{ leaseContract.contractId }}" disabled>
+    </div>
+    <div class="row mb-3">
+        <label for="leaseAmount" class="form-label col-sm-2 col-form-label">Lease Amount (in €)</label>
+        <input type="number" class="form-contol col-sm-10" id="leaseAmount" value="{{ leaseContract.leaseAmount }}">
+    </div>
+    <div class="row mb-3">
+        <label for="dateOfSignature" class="form-label col-sm-2 col-form-label">Date of Signature</label>
+        <input type="date" class="form-contol col-sm-10" id="dateOfSignature" value="{{ leaseContract.dateOfSignature }}">
+    </div>
+    <div class="row mb-3">
+        <label for="additionalCosts" class="form-label col-sm-2 col-form-label">Additionl Costs (in €)</label>
+        <input type="number" class="form-contol col-sm-10" id="additionalCosts" value="{{ leaseContract.additionalCosts }}">
+    </div>
+    <div class="row mb-3">
+        <label for="numberOfPersons" class="form-label col-sm-2 col-form-label">Number of Persons</label>
+        <input type="number" class="form-contol col-sm-10" id="numberOfPersons" value="{{ leaseContract.numberOfPersons }}">
+    </div>    
+    <div class="row mb-3">
+        <label for="renterId" class="form-label col-sm-2 col-form-label">Renter ID</label>
+        <input type="number" class="form-contol col-sm-10" id="renterId" value="{{ leaseContract.renterId}}">
+    </div>    
+    <div class="row mb-3">
+        <label for="apartmentId" class="form-label col-sm-2 col-form-label">Apartment ID</label>
+        <input type="number" class="form-contol col-sm-10" id="apartmentId" value="{{ leaseContract.apartmentId }}">
+    </div>
+    <div class="row mb-3">
+        <label for="active" class="form-label col-sm-2 col-form-label">Status</label>
+        <input type="text" class="form-contol col-sm-10" id="active" value="{{ leaseContract.active }}">
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+    <button type="button" class="btn btn-danger" (click)="deleteLeaseContract()">delete</button>
+</form>

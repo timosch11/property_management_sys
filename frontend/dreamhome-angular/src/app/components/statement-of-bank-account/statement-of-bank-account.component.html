@@ -1,0 +1,24 @@
+<h1>Statement of Bank Account</h1>
+  <button class="btn btn-primary" [routerLink]="['/statement-of-bank-account/upload']">upload statement of bank account</button>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Posting Date</th>
+      <th>Value Date</th>
+      <th>Posting Text</th>
+      <th>Payment Reason</th>
+      <th>Debtor/Creditor</th>
+      <th>Amount of Payment</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let statement of statementsOfBankAccount">
+    <tr>
+      <td>{{ statement.postingDate }}</td>
+      <td>{{ statement.valueDate }}</td>
+      <td>{{ statement.postingText }}</td>
+      <td>{{ statement.paymentReason }}</td>
+      <td>{{ statement.debtorCreditor }}</td>
+      <td>{{ statement.amountOfPayment }} €</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,9 @@
+<h1>Upload Statement of Bank Account</h1>
+<form (ngSubmit)="onSubmit()">
+  <div class="row mb-3">
+    <label for="formFile" class="form-label col-sm-2 col-form-label">statement of bank account csv upload</label>
+    <input class="form-contol col-sm-10" type="file" id="formFile" accept=".csv"
+      (change)="handleFileInput($event.target)" />
+  </div>
+  <button class="btn btn-primary " type="submit">upload</button>
+</form>
